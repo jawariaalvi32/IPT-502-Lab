@@ -1,3 +1,3 @@
-## HOsted Link for Output
+## Hosted Link for Output
 
-[a link](https://ipt-502.web.app/SimpleUIDesign)
+[Hosted Link Here](https://ipt-502.web.app/SimpleUIDesign)
