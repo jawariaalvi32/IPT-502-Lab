@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\obj\Debug\IPT.TEST.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.TEST.exe.config
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.TEST.exe
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.TEST.pdb
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.DATA.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\EntityFramework.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.DATA.pdb
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\IPT.DATA.dll.config
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\EntityFramework.xml
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\obj\Debug\IPT.TEST.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\obj\Debug\IPT.TEST.csproj.CopyComplete
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\obj\Debug\IPT.TEST.exe
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\obj\Debug\IPT.TEST.pdb
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.TEST\bin\Debug\EntityFramework.SqlServer.xml

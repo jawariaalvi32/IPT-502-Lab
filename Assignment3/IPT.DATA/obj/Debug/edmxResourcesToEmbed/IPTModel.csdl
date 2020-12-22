@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK_Book_Author" FromRole="Author" ToRole="Book" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AuthorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Author" Relationship="Self.FK_Book_Author" FromRole="Book" ToRole="Author" />
+    <NavigationProperty Name="BookIssues" Relationship="Self.FK_BookIssue_Book" FromRole="Book" ToRole="BookIssue" />
+  </EntityType>
+  <EntityType Name="BookIssue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IssueDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MemberId" Type="Int32" Nullable="false" />
+    <Property Name="BookId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_BookIssue_Book" FromRole="BookIssue" ToRole="Book" />
+    <NavigationProperty Name="Member" Relationship="Self.FK_BookIssue_Member" FromRole="BookIssue" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactNo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BookIssues" Relationship="Self.FK_BookIssue_Member" FromRole="Member" ToRole="BookIssue" />
+  </EntityType>
+  <Association Name="FK_Book_Author">
+    <End Role="Author" Type="Self.Author" Multiplicity="1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookIssue_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="BookIssue" Type="Self.BookIssue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookIssue">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BookIssue_Member">
+    <End Role="Member" Type="Self.Member" Multiplicity="1" />
+    <End Role="BookIssue" Type="Self.BookIssue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookIssue">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibraryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="Self.Author" />
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="BookIssues" EntityType="Self.BookIssue" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <AssociationSet Name="FK_Book_Author" Association="Self.FK_Book_Author">
+      <End Role="Author" EntitySet="Authors" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookIssue_Book" Association="Self.FK_BookIssue_Book">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="BookIssue" EntitySet="BookIssues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BookIssue_Member" Association="Self.FK_BookIssue_Member">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="BookIssue" EntitySet="BookIssues" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

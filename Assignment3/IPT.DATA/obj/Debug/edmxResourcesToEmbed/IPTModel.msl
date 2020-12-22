@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities">
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="LibraryModel.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="LibraryModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookIssues">
+      <EntityTypeMapping TypeName="LibraryModel.BookIssue">
+        <MappingFragment StoreEntitySet="BookIssue">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="LibraryModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

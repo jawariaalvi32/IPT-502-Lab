@@ -1,0 +1,11 @@
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\obj\Debug\IPT.DATA.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\IPT.DATA.dll.config
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\IPT.DATA.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\IPT.DATA.pdb
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\EntityFramework.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\EntityFramework.xml
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\obj\Debug\IPT.DATA.csproj.CopyComplete
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\obj\Debug\IPT.DATA.dll
+C:\Users\USER\source\repos\IPT-Ass2\IPT.DATA\obj\Debug\IPT.DATA.pdb
